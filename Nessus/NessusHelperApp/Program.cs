@@ -12,16 +12,19 @@ namespace NessusHelperApp
         {
             // Login Local Nessus Server
             var nessusHelper = new NessusHelper();
-            var result = nessusHelper.Login("****", "****");
 
-            if (!result.Success)
-            {
-                Console.WriteLine(result.ErrorMessage);
-                return;
-            }
-
+            // Login Linux Nessus Server
+            //var nessusHelper = new NessusHelper("192.168.100.10",8834);
             try
             {
+                var result = nessusHelper.Login("12345", "54321");
+
+                if (!result.Success)
+                {
+                    Console.WriteLine(result.ErrorMessage);
+                    return;
+                }
+
                 // Get all folders
                 var folders = nessusHelper.GetFoldersList();
                 foreach (var folder in folders)

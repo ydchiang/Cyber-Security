@@ -5,24 +5,20 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Company>YD Chiang</Company>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <ApplicationIcon />
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\WorkSpace\bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>C:\WorkSpace\bin\Release\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NessusHelperLib\NessusHelperLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="NessusHelperLib">
-      <HintPath>..\bin\Debug\netcoreapp3.1\NessusHelperLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
