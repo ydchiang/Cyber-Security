@@ -40,6 +40,14 @@ namespace NessusHelperApp
                 {
                     Console.WriteLine($"ID={scan.Id}, Name={scan.Name}, Type={scan.ScanType}, Owner={scan.Owner}.");
                 }
+
+                // Get Scan History List
+                // TODO: 
+                // 1. scanid 透過 ScansList 取得
+                // 2. Essential 版本無法透過 API 取得 History 的問題 (目前無解...)
+                var scanHistory = nessusHelper.GetScanHistory("40");
+                Console.WriteLine(scanHistory.Count);
+
             }
             catch (Exception ex)
             {
